@@ -21,3 +21,5 @@ export { default as CourseCardDeck } from "./lib/Organisms/CardDeck/CourseCardDe
 export { default as StudentCardDeck } from "./lib/Organisms/CardDeck/StudentCardDeck.svelte";
 export { default as TopicNavigator } from "./lib/Organisms/TopicNavigator/TopicNavigator.svelte";
 export { default as UnitCard } from "./lib/Organisms/UnitCard/UnitCard.svelte";
+
+export { default as UniversalCard } from "./lib/Molecules/Cards/Card/Card.svelte";

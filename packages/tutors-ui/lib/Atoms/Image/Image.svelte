@@ -2,13 +2,13 @@
   import type { Lo } from "tutors-reader-lib/src/types/lo-types";
   import { layout } from "tutors-reader-lib/src/stores/stores";
   import { onDestroy } from "svelte";
-  import Iconify from "@iconify/svelte";
+  import { Icon } from "tutors-ui";
   import { Avatar } from "@skeletonlabs/skeleton";
 
   export let lo: Lo;
   export let miniImage = false;
   let imageHeight = "";
-  let iconHeight = "";
+  let iconHeight: string = "";
   let colourPrefix = "";
 
   function isColour(string: string) {
@@ -50,7 +50,7 @@
 </script>
 
 {#if lo.icon}
-  <Iconify icon="{lo.icon.type}" color="{colourPrefix}{lo.icon.color}" height="{iconHeight}" />
+  <Icon icon="{lo.icon.type}" color="{colourPrefix}{lo.icon.color}" height="{iconHeight}" />
 {:else}
   <Avatar src="{lo.img}" alt="{lo.title}" width="{imageHeight}" rounded="rounded-xl" background="none" />
 {/if}

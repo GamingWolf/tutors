@@ -11,6 +11,7 @@ const meta = {
     type: {
       control: "select",
       options: [
+        "",
         "slack",
         "moodle",
         "youtube",
@@ -53,6 +54,12 @@ const meta = {
         "listOnline"
       ]
     },
+    icon: {
+      control: "text"
+    },
+    color: {
+      control: "color"
+    },
     width: {
       control: { type: "select" },
       options: ["20", "40", "60", "80", "100"]
@@ -71,7 +78,7 @@ type Story = StoryObj<typeof meta>;
 export const icon: Story = {
   args: {
     type: "dark",
-    width: "40",
-    height: "40"
+    width: 40,
+    height: 40
   }
 };
