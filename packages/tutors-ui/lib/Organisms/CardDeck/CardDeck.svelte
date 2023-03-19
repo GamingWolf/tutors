@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Card } from "tutors-ui";
+  import { Card, UniversalCard } from "tutors-ui";
   import type { Lo } from "tutors-reader-lib/src/types/lo-types";
 
   export let los: Lo[] = [];
@@ -18,7 +18,7 @@
         <Card lo="{lo}" />
       {/each}
       {#each unOrderedLos as lo}
-        <Card lo="{lo}" />
+        <UniversalCard title="{lo.title}" type="{lo.type}" img="{lo.img}" icon="{lo.icon}" video="{lo.video}" summary="{lo.summary}" route="{lo.route}" />
       {/each}
     </div>
   </div>

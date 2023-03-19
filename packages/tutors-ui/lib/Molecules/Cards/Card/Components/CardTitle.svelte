@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Icon from "@iconify/svelte";
+  import { Icon } from "tutors-ui";
 
   export let title: string = "";
   export let type: string = "";

@@ -17,7 +17,7 @@
   export let icon = "";
   export let miniImage = false;
 
-  const borderColor: string = "";
+  let borderColor: string = "";
 
   if (type === "web") {
     if (route.startsWith("http")) {
@@ -29,13 +29,13 @@
   summary = convertMd(summary, "");
 
   if (type === "talk" || type === "course" || type === "topic" || type === "archive" || type === "paneltalk") {
-    borderColor === "border-primary-500";
+    borderColor = "primary";
   } else if (type === "web" || type === "panelvideo" || type === "video") {
-    borderColor === "border-error-500";
+    borderColor = "error";
   } else if (type === "lab" || type === "unit" || type === "side") {
-    borderColor === "border-success-500";
+    borderColor = "success";
   } else if (type === "note" || type === "reference" || type === "github" || type === "panelnote") {
-    borderColor === "border-warning-500";
+    borderColor = "warning";
   } 
   let headingText = "";
   let cardWidths = "";
@@ -75,10 +75,10 @@
     <CardTitle title="{title}" type="{type}" video="{video}" textSize="{headingText}" />
     <div class="card-body">
       <figure class="flex justify-center object-scale-down p-1">
-        {#if img}
-          <Avatar src="{img}" alt="{title}" width="{imageHeight}" rounded="rounded-xl" background="none" />
+        {#if icon !== ""}
+        <Icon type="{icon}" />
         {:else}
-          <Icon type="{icon}" />
+        <Avatar src="{img}" alt="{title}" width="{imageHeight}" rounded="rounded-xl" background="none" />
         {/if}
       </figure>
     </div>
