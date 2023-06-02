@@ -89,17 +89,28 @@
         <span class="flex-none">Dyslexia</span>
       </button>
       </li>
-            <!-- svelte-ignore a11y-click-events-have-key-events -->
-            <li
-            class="option !p-0"
-            on:click="{() => {
-              storeTheme.set('bremify');
-            }}"
-          >
-          <button class="btn w-full flex justify-between" class:!variant-soft-primary="{$storeTheme === 'bremify'}">
-            <span class="flex-none">Bremify</span>
-          </button>
-          </li>
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <li
+        class="option !p-0"
+        on:click="{() => {
+          storeTheme.set('bremify');
+        }}"
+      >
+        <button class="btn w-full flex justify-between" class:!variant-soft-primary="{$storeTheme === 'bremify'}">
+          <span class="flex-none">Bremify - Colour</span>
+        </button>
+      </li>
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <li
+        class="option !p-0"
+        on:click="{() => {
+          storeTheme.set('bremifyBlack');
+        }}"
+      >
+      <button class="btn w-full flex justify-between" class:!variant-soft-primary="{$storeTheme === 'bremifyBlack'}">
+        <span class="flex-none">Bremify - Black</span>
+      </button>
+      </li>
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       {#if isHalloween}
       <li

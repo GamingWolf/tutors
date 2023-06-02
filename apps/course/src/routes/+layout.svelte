@@ -15,6 +15,7 @@
   import halloween from "tutors-ui/lib/themes/halloween.css?inline";
   import valentines from "tutors-ui/lib/themes/valentines.css?inline";
   import bremify from "tutors-ui/lib/themes/bremify.css?inline";
+  import bremifyBlack from "tutors-ui/lib/themes/bremify-black.css?inline";
   import { authenticating, transitionKey, storeTheme, currentCourse, currentLo } from "tutors-reader-lib/src/stores/stores";
   import PageTransition from "$lib/PageTransition.svelte";
   import { getKeys } from "../environment";
@@ -25,7 +26,7 @@
     import Loading from "$lib/support/Loading.svelte";
 
   let mounted = false;
-  const themes: any = { tutors, dyslexia, halloween, valentines, bremify };
+  const themes: any = { tutors, dyslexia, halloween, valentines, bremify, bremifyBlack };
   let currentRoute = "";
 
   storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
